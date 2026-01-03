@@ -1,9 +1,3 @@
-
-[[GRC Integrated Control Framework]]
-
-
-
-
 # Automated Deployment Instructions (GICF)
 
 ## 0) What “deployment” means for GICF

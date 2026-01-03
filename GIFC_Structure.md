@@ -1,8 +1,3 @@
-[[GRC Integrated Control Framework]]
-
-
-```markdown
-
 grc-integrated-control-framework/
 ├── README.md
 ├── LICENSE
@@ -43,6 +38,4 @@ grc-integrated-control-framework/
     ├── control-assessment-template.md
     ├── audit-evidence-template.md
     └── executive-report-template.md
-
-```
 

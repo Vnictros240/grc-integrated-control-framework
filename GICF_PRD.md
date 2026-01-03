@@ -1,8 +1,3 @@
-[[GRC Integrated Control Framework]]
-
-[[GICF_README]]
-
-
 # **GRC Integrated Control Framework (GICF)**
 
 ## 1.1 Overview
