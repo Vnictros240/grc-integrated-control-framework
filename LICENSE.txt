@@ -1,4 +1,4 @@
-Copyright (c) 2026 Victor Sullivan.
+Copyright (c) 2026 Victor Sullivan (Vnictros240).
 All rights reserved.
 
 This repository and its contents are publicly accessible for the purposes of
