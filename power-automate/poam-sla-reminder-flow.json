@@ -1,0 +1,8 @@
+{
+    "name": "POAM SLA Reminder Flow",
+    "trigger": "Scheduled - Daily",
+    "actions": [
+        "Get Overdue POAMs",
+        "Send Email to Owner"
+    ]
+}

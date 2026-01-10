@@ -1,0 +1,24 @@
+{
+  "environment": "dev",
+  "tenantId": "YOUR_TENANT_ID",
+  "clientId": "YOUR_CLIENT_ID",
+  "certificateThumbprint": "YOUR_CERT_THUMBPRINT",
+  "sharePoint": {
+    "siteUrl": "https://yourtenant.sharepoint.com/sites/GICF-Dev",
+    "siteTitle": "GICF Compliance Operations (Dev)",
+    "ownerEmail": "admin@yourtenant.onmicrosoft.com"
+  },
+  "teams": {
+    "teamName": "GICF - Compliance Operations (Dev)",
+    "channels": [
+      "Announcements",
+      "Controls",
+      "POAM",
+      "Audits",
+      "Vendors"
+    ]
+  },
+  "powerBi": {
+    "workspaceName": "GICF Compliance (Dev)"
+  }
+}

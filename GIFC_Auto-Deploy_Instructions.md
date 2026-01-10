@@ -295,3 +295,63 @@ Even with automation, these are usually one-time manual:
 * Creating/authorizing connector connections (ServiceNow/Jira) if governed
 * Power BI tenant setting allowing service principals
 * Sensitivity label / Purview policies if enforced org-wide
+
+---
+
+# Phase 2: Zero-to-Hero Deployment (Validation Guide)
+
+## 0) Goal
+Go from "No Access" to a "Fully Deployed GICF Environment" for validation purposes.
+
+## 1) Get a Tenant (Free)
+1.  **Join the Microsoft 365 Developer Program**:
+    *   Go to [developer.microsoft.com/microsoft-365/dev-program](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
+    *   Sign in with a personal Microsoft account.
+    *   Select "Set up E5 subscription".
+    *   This gives you a free, renewable tenant with 25 licenses (e.g., `admin@yourdevtenant.onmicrosoft.com`).
+
+## 2) Prepare Your Local Environment
+1.  **Install PowerShell 7**:
+    *   Windows: `winget install --id Microsoft.PowerShell --source winget`
+2.  **Install Configured Modules**:
+    ```powershell
+    Install-Module PnP.PowerShell -Force
+    Install-Module Microsoft.Graph -Force
+    ```
+3.  **Install Power Platform CLI**:
+    *   `winget install Microsoft.PowerPlatformCLI`
+
+## 3) Configure Deployment
+1.  Open `deploy/config/dev.json`.
+2.  Update `tenantId` (From Azure Portal > Overview).
+3.  Update `sharePoint.siteUrl` to match your new tenant (e.g., `https://<yourdevtenant>.sharepoint.com/sites/GICF`).
+4.  Update `ownerEmail` to your dev admin email.
+
+## 4) Execute Deployment (The "One-Click" Experience)
+Run the following in PowerShell 7:
+
+```powershell
+cd deploy/scripts
+
+# 1. Connect
+./01-connect.ps1 -ConfigPath "../config/dev.json"
+
+# 2. Deploy Infrastructure
+./02-sharepoint-site.ps1
+./03-lists.ps1
+./04-libraries.ps1
+./05-teams.ps1
+
+# 3. Simulate Platform Deploy (Since we are in Dev Mode)
+./06-powerplatform-import.ps1
+./07-powerbi-deploy.ps1
+```
+
+## 5) Verify Result (Evidence)
+1.  **SharePoint**: Navigate to `https://<yourdevtenant>.sharepoint.com/sites/GICF`.
+    *   Verify "Evidence" library exists.
+    *   Verify Lists (Controls, POAM) exist.
+2.  **Teams**: Check for "GICF - Compliance Operations" team.
+3.  **Visual Verification**:
+    *   Open `preview/dashboard.html` in your browser to see the simulated populated state of the dashboards.
+

@@ -1,0 +1,54 @@
+{
+    "listName": "POAM",
+    "columns": [
+        {
+            "name": "ControlID",
+            "type": "Lookup",
+            "targetList": "Controls"
+        },
+        {
+            "name": "FindingDescription",
+            "type": "Note"
+        },
+        {
+            "name": "RootCause",
+            "type": "Note"
+        },
+        {
+            "name": "RiskRating",
+            "type": "Choice",
+            "choices": [
+                "Low",
+                "Medium",
+                "High",
+                "Critical"
+            ]
+        },
+        {
+            "name": "RemediationPlan",
+            "type": "Note"
+        },
+        {
+            "name": "Owner",
+            "type": "Person"
+        },
+        {
+            "name": "DueDate",
+            "type": "DateTime"
+        },
+        {
+            "name": "Status",
+            "type": "Choice",
+            "choices": [
+                "Open",
+                "In Progress",
+                "Closed",
+                "Delayed"
+            ]
+        },
+        {
+            "name": "TicketID",
+            "type": "Text"
+        }
+    ]
+}

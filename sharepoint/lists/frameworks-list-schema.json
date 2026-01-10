@@ -1,0 +1,22 @@
+{
+    "listName": "FrameworkMappings",
+    "columns": [
+        {
+            "name": "ControlID",
+            "type": "Lookup",
+            "targetList": "Controls"
+        },
+        {
+            "name": "FrameworkName",
+            "type": "Text"
+        },
+        {
+            "name": "FrameworkControlID",
+            "type": "Text"
+        },
+        {
+            "name": "RequirementText",
+            "type": "Note"
+        }
+    ]
+}

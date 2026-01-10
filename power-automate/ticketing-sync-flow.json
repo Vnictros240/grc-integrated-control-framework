@@ -1,0 +1,8 @@
+{
+    "name": "Ticketing Sync Flow",
+    "trigger": "When an item is created (POAM List)",
+    "actions": [
+        "Create ServiceNow Incident / Jira Issue",
+        "Update POAM Item with Ticket ID"
+    ]
+}

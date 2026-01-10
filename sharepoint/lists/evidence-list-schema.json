@@ -1,0 +1,37 @@
+{
+    "listName": "EvidenceRegister",
+    "columns": [
+        {
+            "name": "ControlID",
+            "type": "Lookup",
+            "targetList": "Controls"
+        },
+        {
+            "name": "EvidenceType",
+            "type": "Choice",
+            "choices": [
+                "Screenshot",
+                "Log",
+                "Report",
+                "Policy"
+            ]
+        },
+        {
+            "name": "DateCollected",
+            "type": "DateTime"
+        },
+        {
+            "name": "ExpirationDate",
+            "type": "DateTime"
+        },
+        {
+            "name": "Status",
+            "type": "Choice",
+            "choices": [
+                "Valid",
+                "Expired",
+                "Under Review"
+            ]
+        }
+    ]
+}

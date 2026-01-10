@@ -1,0 +1,29 @@
+name: GICF Deployment
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install PnP PowerShell
+        shell: powershell
+        run: |
+          Install-Module PnP.PowerShell -Scope CurrentUser -Force
+          Install-Module Microsoft.Graph -Scope CurrentUser -Force
+
+      - name: Deploy to Dev
+        shell: powershell
+        run: |
+          cd deploy/scripts
+          # Mocking the run for now as we don't have real secrets in this environment
+          # ./01-connect.ps1 -ConfigPath "../config/dev.json"
+          # ./02-sharepoint-site.ps1
+          # ./03-lists.ps1
+          # ./04-libraries.ps1
+          Write-Host "Deployment pipeline stub executed."

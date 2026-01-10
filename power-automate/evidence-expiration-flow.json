@@ -1,0 +1,8 @@
+{
+    "name": "Evidence Expiration Flow",
+    "trigger": "Scheduled - Daily",
+    "actions": [
+        "Get Expiring Evidence",
+        "Send Email to Owner"
+    ]
+}

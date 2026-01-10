@@ -1,0 +1,41 @@
+{
+    "listName": "Controls",
+    "columns": [
+        {
+            "name": "ControlID",
+            "type": "Text"
+        },
+        {
+            "name": "ControlName",
+            "type": "Text"
+        },
+        {
+            "name": "Description",
+            "type": "Note"
+        },
+        {
+            "name": "Owner",
+            "type": "Person"
+        },
+        {
+            "name": "ControlType",
+            "type": "Choice",
+            "choices": [
+                "Administrative",
+                "Technical",
+                "Physical"
+            ]
+        },
+        {
+            "name": "Frequency",
+            "type": "Choice",
+            "choices": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Quarterly",
+                "Annually"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "name": "POAM Creation Flow",
+    "trigger": "When an item is created or modified (Controls List)",
+    "condition": "Status equals 'Failed'",
+    "actions": [
+        "Create Item in POAM List",
+        "Notify Assignee"
+    ]
+}
